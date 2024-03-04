@@ -10,7 +10,7 @@ const Header: React.FC = () => {
         <IconLink />
       </Box>
       <nav style={navStyles}>
-        <a href="/about" style={navLinkStyles}>
+        <a href="/" style={navLinkStyles}>
           About
         </a>
         <a href="/contact" style={navLinkStyles}>

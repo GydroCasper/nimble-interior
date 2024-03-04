@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
   return (
     <Stack style={sectionStyles} justifyContent="center" alignItems="center">
       <Box style={sectionCaptionStyles}>Contacts</Box>
-      <Stack style={sectionTextStyles}>
+      <Stack style={sectionTextStyles} spacing={3} marginTop={5}>
         <ContactItem title="email" text="contact@nimbleinterior.com" />
         <ContactItem title="our location" text="Massachusetts" />
       </Stack>
