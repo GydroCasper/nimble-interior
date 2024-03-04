@@ -9,8 +9,8 @@ import Contact from "./Contact/Contact"
 function App() {
   return (
     <div style={fontStyles}>
-      <Header />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />

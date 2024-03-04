@@ -2,6 +2,13 @@ import React from "react"
 import { headerStyles, navLinkStyles, navStyles } from "./HeaderStyles"
 import IconLink from "../IconLink/IconLink"
 import { Box, Stack } from "@mui/material"
+import { NavLink } from "react-router-dom"
+
+const activeStyle = {
+  opacity: 1,
+  color: "#1471b9",
+  fontWeight: 600,
+}
 
 const Header: React.FC = () => {
   return (
@@ -10,12 +17,22 @@ const Header: React.FC = () => {
         <IconLink />
       </Box>
       <nav style={navStyles}>
-        <a href="/" style={navLinkStyles}>
+        <NavLink
+          to="/"
+          style={({ isActive }) =>
+            isActive ? { ...navLinkStyles, ...activeStyle } : navLinkStyles
+          }
+        >
           About
-        </a>
-        <a href="/contact" style={navLinkStyles}>
+        </NavLink>
+        <NavLink
+          to="/contact"
+          style={({ isActive }) =>
+            isActive ? { ...navLinkStyles, ...activeStyle } : navLinkStyles
+          }
+        >
           Contact
-        </a>
+        </NavLink>
       </nav>
       <div></div>
     </Stack>
